@@ -1,3 +1,4 @@
 <div *ngFor="let production of this.productionList">
+    <h2>Production {{ production.getName() }}</h2>
     <app-production [production]="production"></app-production>
 </div>

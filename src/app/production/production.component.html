@@ -1,1 +1,10 @@
-<p>production works!</p>
+<ul>
+    <li *ngFor="let step of this.production.getSteps()">
+        <p>amount of production buildings: {{ step.getAmount() }}</p>
+        <p>input amount: {{ step.getInput() }}</p>
+        <p>input material: {{ step.getInputMaterial() }}</p>
+        <p>minutes: {{ step.getMinutes() }}</p>
+        <p>output amount: {{ step.getOutput() }}</p>
+        <p>output material: {{ step.getOutputMaterial() }}</p>
+    </li>
+</ul>

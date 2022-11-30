@@ -1,8 +1,12 @@
-class Production {
-    private readonly steps: Array<ProductionStep>;
+import { ProductionStep } from '../models/production-step';
 
-    constructor() {
+export class Production {
+    private readonly steps: Array<ProductionStep>;
+    private readonly name: string;
+
+    constructor(name: string) {
         this.steps = [];
+        this.name = name;
     }
 
     public add(step: ProductionStep) {
@@ -11,5 +15,9 @@ class Production {
 
     public getSteps() {
         return this.steps;
+    }
+
+    public getName() {
+        return this.name;
     }
 }

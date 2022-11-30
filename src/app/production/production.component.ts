@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Production } from '../models/production';
 
 @Component({
   selector: 'app-production',
