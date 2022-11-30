@@ -19,11 +19,11 @@ export class ProductionsListComponent implements OnInit {
 
   private initializeList() {
     let productionLinen = new Production('Leinenstoff');
-    productionLinen.add(new ProductionStep(2, 2, 'Flachsfelf', 'Flachs', 8, 1));
+    productionLinen.add(new ProductionStep(2, 2, 'Flachsfeld', 'Flachs', 8, 1));
     productionLinen.add(new ProductionStep(1, 2, 'Flachs', 'Leinenstoff', 2, 1));
     
     let productionRope = new Production('Seile');
-    productionRope.add(new ProductionStep(1, 2, 'Flachsfelf', 'Flachs', 8, 1));
+    productionRope.add(new ProductionStep(1, 2, 'Flachsfeld', 'Flachs', 8, 1));
     productionRope.add(new ProductionStep(1, 2, 'Flachs', 'Seile', 1, 1));
 
     this.productionList.push(productionLinen);

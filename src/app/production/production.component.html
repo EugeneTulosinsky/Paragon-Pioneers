@@ -1,5 +1,6 @@
 <ul>
-    <li *ngFor="let step of this.production.getSteps()">
+    <li *ngFor="let step of this.production.getSteps(); let i = index;">
+        <h3>Step {{ i+1 }}:</h3>
         <p>amount of production buildings: {{ step.getAmount() }}</p>
         <p>input amount: {{ step.getInput() }}</p>
         <p>input material: {{ step.getInputMaterial() }}</p>
