@@ -1,22 +1,32 @@
-export class ProductionStep {
-    private readonly amount: number;
+import { TreeNode } from "angular13-organization-chart";
+
+export class ProductionStep implements TreeNode {
+    private readonly amount?: number;
+    private readonly building: string;
     private readonly minutes: number;
     private readonly input: number;
     private readonly output: number;
-    private readonly inputMaterial: string;
+    private readonly inputMaterial: string[];
     private readonly outputMaterial: string;
+    children: ProductionStep[];
 
-    constructor(amount: number, minutes: number, inputMaterial: string, outputMaterial: string, input: number = 1, output: number = 1) {
+    constructor(building: string, minutes: number, inputMaterial: string[], outputMaterial: string, children: ProductionStep[], input: number = 1, output: number = 1, amount?: number, ) {
         this.amount = amount;
+        this.building = building;
         this.minutes = minutes;
         this.inputMaterial = inputMaterial;
         this.outputMaterial = outputMaterial;
         this.input = input;
         this.output = output;
+        this.children = children;
     }
 
     public getAmount() {
         return this.amount;
+    }
+
+    public getBuilding() {
+        return this.building;
     }
 
     public getMinutes() {

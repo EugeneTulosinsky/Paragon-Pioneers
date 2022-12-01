@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OrgChartModule } from 'angular13-organization-chart';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,7 +19,8 @@ import { ProductionFormComponent } from './production-form/production-form.compo
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OrgChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
