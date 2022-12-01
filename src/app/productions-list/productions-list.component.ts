@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Production } from '../models/production';
-import { ProductionStep } from '../models/production-step';
+import { ProductionStep, Ressource } from '../models/production-step';
 
 @Component({
   selector: 'app-productions-list',
@@ -18,12 +18,12 @@ export class ProductionsListComponent implements OnInit {
   }
 
   private initializeList() {
-    let stepOne = new ProductionStep('Flachsfarm', 2, ['Flachsfeld'], 'Flachs', [], 8, 1);
-    let stepTwo = new ProductionStep('Leinenspinnerei', 2, ['Flachs'], 'Leinenstoff', [stepOne], 2, 1);
+    let stepOne = new ProductionStep('Flachsfarm', 2, [new Ressource('Flachsfeld', 8)], new Ressource('Flachs', 1), []);
+    let stepTwo = new ProductionStep('Leinenspinnerei', 2, [new Ressource('Flachs', 2)], new Ressource('Leinenstoff', 1), [stepOne]);
     let productionLinen = new Production('Leinenstoff', stepTwo);
     
-    stepOne = new ProductionStep('Flachsfarm', 2, ['Flachsfeld'], 'Flachs', [], 8, 1);
-    stepTwo = new ProductionStep('Seilerei', 2, ['Flachs'], 'Seile', [stepOne], 1, 1);
+    stepOne = new ProductionStep('Flachsfarm', 2, [new Ressource('Flachsfeld', 8)], new Ressource('Flachs', 1), []);
+    stepTwo = new ProductionStep('Seilerei', 2, [new Ressource('Flachs', 1)], new Ressource('Seile', 1), [stepOne]);
     let productionRope = new Production('Leinenstoff', stepTwo);
 
     this.productionList.push(productionLinen);
