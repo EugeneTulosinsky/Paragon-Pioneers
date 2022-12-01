@@ -1,0 +1,17 @@
+<ng-container>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Item</mat-label>
+    <input matInput
+           aria-label="Item"
+           [matAutocomplete]="auto"
+           [formControl]="itemCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let item of filteredItems | async" [value]="item.name">
+        <img alt="" class="option-img" [src]="item.icon" height="25">
+        <span>{{item.name}}</span>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</ng-container>
+
+
