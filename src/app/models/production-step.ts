@@ -4,11 +4,11 @@ export class ProductionStep implements TreeNode {
     private readonly amount?: number;
     private readonly building: string;
     private readonly minutes: number;
-    private readonly input: Ressource[];
-    private readonly output: Ressource;
+    private readonly input: Resource[];
+    private readonly output: Resource;
     children: ProductionStep[];
 
-    constructor(building: string, minutes: number, input: Ressource[], output: Ressource, children: ProductionStep[], amount?: number) {
+    constructor(building: string, minutes: number, input: Resource[], output: Resource, children: ProductionStep[], amount?: number) {
         this.amount = amount;
         this.building = building;
         this.minutes = minutes;
@@ -42,7 +42,7 @@ export class ProductionStep implements TreeNode {
     }
 }
 
-export class Ressource {
+export class Resource {
     amount: number;
     material: string;
 
