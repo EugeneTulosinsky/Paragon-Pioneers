@@ -1,23 +1,23 @@
 import { ProductionStep } from '../models/production-step';
 
 export class Production {
-    private readonly steps: Array<ProductionStep>;
+    private readonly root: ProductionStep;
     private readonly name: string;
 
-    constructor(name: string) {
-        this.steps = [];
+    constructor(name: string, root: ProductionStep) {
+        this.root = root;
         this.name = name;
     }
 
-    public add(step: ProductionStep) {
-        this.steps.push(step);
-    }
-
-    public getSteps() {
-        return this.steps;
+    public getRoot() {
+        return this.root;
     }
 
     public getName() {
         return this.name;
+    }
+
+    public resolveAmounts() {
+
     }
 }
