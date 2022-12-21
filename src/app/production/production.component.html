@@ -6,8 +6,12 @@
 <ng-template #nodeTemplate let-node>
     <div class="chart-node">
         <img [src]="node?.image" [alt]="node?.building">
-        <div class="name">{{node?.name}}</div>
-        <div class="description">{{node?.description}} </div>
-        <!-- ToDo: add other fields-->
+        <div class="building">{{node.getBuilding()}} </div>
+        <div class="inputs">
+            <div class="input" *ngFor="let input of node.getInput()">{{input.toString()}} </div>
+        </div>
+        <div class="output">{{node.getOutput().toString()}} </div>
+        <div class="time">{{node.getMinutes()}}m </div>
+        <div class="amount">{{node?.getAmount()}} </div>
     </div>
 </ng-template>

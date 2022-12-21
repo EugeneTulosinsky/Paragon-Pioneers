@@ -1,0 +1,35 @@
+:host >>> .ng13-org-chart-entity-box {
+    overflow: unset;
+    height: 5rem;
+    width: 7rem;
+}
+:host >>> .ng13-org-chart-entity-box .building {
+    position: absolute;
+    top: calc(50% - .5rem);
+}
+:host >>> .ng13-org-chart-entity-box .inputs {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    top: auto;
+    display: flex;
+}
+:host >>> .ng13-org-chart-entity-box .inputs .input {
+    margin-right: .2rem;
+    white-space: nowrap;
+}
+:host >>> .ng13-org-chart-entity-box .output {
+    position: absolute;
+    top: -1rem;
+}
+:host >>> .ng13-org-chart-entity-box .time {
+    position: absolute;
+    right: -1.5rem;
+    top: calc(50% - .5rem);
+}
+:host >>> .ng13-org-chart-entity-box .amount {
+    position: absolute;
+    right: -.5rem;
+    top: -.5rem;
+    font-weight: bold;
+}

@@ -50,4 +50,8 @@ export class Resource {
         this.amount = amount;
         this.material = material;
     }
+
+    public toString() {
+        return this.amount + ' ' + this.material;
+    }
 }
