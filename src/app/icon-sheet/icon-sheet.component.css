@@ -14,21 +14,214 @@
   height: 44px;
   display: block;
 }
+/*
+ Ab hier werden die einzelnen Sprites aus dem Gesamtbild gewählt, damit man sie
+ einfach über eine ID aufrufen kann.
+*/
 
-#home {
-  left: 0px;
-  width: 46px;
-  background: url('World_Icons.png') 0 0;
+.icon {
+  height: 128px;
+  width: 128px;
+  background-image: url('World_Icons.png');
+  background-size: 2048px 2048px;
 }
 
-#prev {
-  left: 63px;
-  width: 43px;
-  background: url('World_Icons.png') -47px 0;
+.icon-wood {
+  background-position: 0px 0px;
 }
 
-#next {
-  left: 129px;
-  width: 43px;
-  background: url('World_Icons.png') -91px 0;
+.icon-villager {
+  background-position: -128px 0px;
 }
+
+.icon-fish {
+  background-position: -256px 0px;
+}
+.icon-plank {
+  background-position: -128px 0px;
+}
+.icon-water {
+  background-position: -512px 0px;
+}
+.icon-wool {
+  background-position: -640px 0px;
+}
+.icon-silk {
+  background-position: -768px 0px;
+}
+.icon-stone {
+  background-position: -896px 0px;
+}
+.icon-wheat {
+  background-position: -1024px 0px;
+}
+.icon-flour {
+  background-position: -1152px 0px;
+}
+.icon-bread {
+  background-position: -1280px 0px;
+}
+.icon-tobacco {
+  background-position: -1408px 0px;
+}
+.icon-cigar {
+  background-position: -1546px 0px;
+}
+.icon-sail {
+  background-position: -1664px 0px;
+}
+.icon-school {
+  background-position: -1792px 0px;
+}
+.icon-clay {
+  background-position: -1920px 0px;
+}
+
+
+.icon-storage {
+  background-position: 0px -128px;
+}
+.icon-coin {
+  background-position: -128px -128px;
+}
+.icon-linseed {
+  background-position: -256px -128px;
+}
+.icon-linen {
+  background-position: -384px -128px;
+}
+.icon-potato {
+  background-position: -512px -128px;
+}
+.icon-schnapps {
+  background-position: -640px -128px;
+}
+.icon-copper_ore {
+  background-position: -768px -128px;
+}
+.icon-copper_ingot {
+  background-position: -896px -128px;
+}
+.icon-brick {
+  background-position: -1024px -128px;
+}
+.icon-malt {
+  background-position: -1152px -128px;
+}
+.icon-hops {
+  background-position: -1280px -128px;
+}
+.icon-beer {
+  background-position: -1408px -128px;
+}
+.icon-heart {
+  background-position: -1536px -128px;
+}
+.icon-coal {
+  background-position: -1664px -128px;
+}
+.icon-cotton {
+  background-position: -1792px -128px;
+}
+.icon-rock_salt {
+  background-position: -1920px -128px;
+}
+
+.icon-gemstone {
+  background-position: 0px -256px;
+}
+.icon-liquor {
+  background-position: -128px -256px;
+}
+.icon-rope {
+  background-position: -256px -256px;
+}
+.icon-map {
+  background-position: -384px -256px;
+}
+.icon-gold_ore {
+  background-position: -512px -256px;
+}
+.icon-gold_ingot {
+  background-position: -640px -256px;
+}
+.icon-gold_jewlery {
+  background-position: -768px -256px;
+}
+.icon-iron_ore {
+  background-position: -896px -256px;
+}
+.icon-iron_ingot {
+  background-position: -1024px -256px;
+}
+.icon-tools {
+  background-position: -1152px -256px;
+}
+.icon-clothes {
+  background-position: -1280px -256px;
+}
+.icon-cattle {
+  background-position: -1408px -256px;
+}
+.icon-meat {
+  background-position: -1536px -256px;
+}
+.icon-soap_water {
+  background-position: -1664px -256px;
+}
+.icon-medicine {
+  background-position: -1792px -256px;
+}
+.icon-salt {
+  background-position: -1920px -256px;
+}
+
+.icon-goblet {
+  background-position: 0px -384px;
+}
+.icon-linseed_oil {
+  background-position: -128px -384px;
+}
+.icon-marble {
+  background-position: -256px -384px;
+}
+.icon-silk {
+  background-position: -384px -384px;
+}
+.icon-silk_cloth {
+  background-position: -512px -384px;
+}
+.icon-dye {
+  background-position: -640px -384px;
+}
+.icon-garment {
+  background-position: -768px -384px;
+}
+.icon-honey {
+  background-position: -896px -384px;
+}
+.icon-liqueur {
+  background-position: -1024px -384px;
+}
+.icon-lobster {
+  background-position: -1152px -384px;
+}
+.icon-feast {
+  background-position: -1280px -384px;
+}
+.icon-grapes {
+  background-position: -1408px -384px;
+}
+.icon-barrel {
+  background-position: -1536px -384px;
+}
+.icon-wine {
+  background-position: -1664px -384px;
+}
+.icon-candle {
+  background-position: -1792px -384px;
+}
+.icon-candle_holder {
+  background-position: -1920px -384px;
+}
+
