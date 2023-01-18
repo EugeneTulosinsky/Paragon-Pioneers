@@ -26,12 +26,19 @@ export class ProductionsListComponent implements OnInit {
     stepTwo = new ProductionStep('Seilerei', 2, [new Resource('Flachs', 1)], new Resource('Seile', 1), [stepOne]);
     let productionRope = new Production('Seile', stepTwo);
 
-    let s1 = new ProductionStep('Flachsfarm', 2, [new Resource('Flachsfeld', 8)], new Resource('Flachs', 1), []);
-    let s2 = new ProductionStep('Seilerei', 2, [new Resource('Flachs', 1)], new Resource('Seile', 1), [s1]);
-    let s3 = new ProductionStep('Seilerei', 2, [new Resource('Flachs', 1)], new Resource('Seile', 1), [s1]);
-    let p = new Production('Leinenstoff', stepTwo);
+    let s5 = new ProductionStep('Kartoffelfarm', 1, [new Resource('Kartoffelfeld', 4)], new Resource('Schnaps', 1), []);
+    let s4 = new ProductionStep('Imkerei', 4, [new Resource('Grasfeld', 8)], new Resource('Honig', 1), []);
+    let s3 = new ProductionStep('Likördestille', 2, [new Resource('Honig', 1), new Resource('Schnaps', 2)], new Resource('Likör', 1), [s4, s5]);
+    let s2 = new ProductionStep('Hummerfänger', 0.666666, [new Resource('Korallenrifffeld', 1)], new Resource('Hummer', 1), []);
+    let s1 = new ProductionStep('Edelküche', 1.33333, [new Resource('Hummer', 2), new Resource('Likör', 1)], new Resource('Festmahl', 2), [s2, s3]);
+    let p = new Production('Festmähler', s1);
 
     this.productionList.push(productionLinen);
     this.productionList.push(productionRope);
+    this.productionList.push(p);
+
+    this.productionList.forEach(element => {
+      element.resolveAmounts();
+    });
   }
 }

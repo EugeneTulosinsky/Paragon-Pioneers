@@ -1,7 +1,7 @@
 import { TreeNode } from "angular13-organization-chart";
 
 export class ProductionStep implements TreeNode {
-    private readonly amount?: number;
+    private amount?: number;
     private readonly building: string;
     private readonly minutes: number;
     private readonly input: Resource[];
@@ -39,6 +39,10 @@ export class ProductionStep implements TreeNode {
 
     public getChildren() {
         return this.children;
+    }
+
+    public setAmount(amount: number) {
+        this.amount = amount;
     }
 }
 

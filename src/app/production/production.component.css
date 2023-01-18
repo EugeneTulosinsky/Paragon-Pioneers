@@ -2,6 +2,7 @@
     overflow: unset;
     height: 5rem;
     width: 7rem;
+    padding: .5rem;
 }
 :host >>> .ng13-org-chart-entity-box .building {
     position: absolute;
@@ -9,7 +10,7 @@
 }
 :host >>> .ng13-org-chart-entity-box .inputs {
     position: absolute;
-    bottom: -1rem;
+    bottom: -1.5rem;
     left: 0;
     top: auto;
     display: flex;
@@ -20,7 +21,7 @@
 }
 :host >>> .ng13-org-chart-entity-box .output {
     position: absolute;
-    top: -1rem;
+    top: -1.5rem;
 }
 :host >>> .ng13-org-chart-entity-box .time {
     position: absolute;
@@ -29,7 +30,10 @@
 }
 :host >>> .ng13-org-chart-entity-box .amount {
     position: absolute;
-    right: -.5rem;
-    top: -.5rem;
+    right: -.75rem;
+    top: -.75rem;
     font-weight: bold;
+}
+:host >>> .ng13-org-chart-entity-connector {
+    height: 2rem;
 }

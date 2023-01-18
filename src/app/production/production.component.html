@@ -6,12 +6,13 @@
 <ng-template #nodeTemplate let-node>
     <div class="chart-node">
         <img [src]="node?.image" [alt]="node?.building">
+        <!-- use div and set background image to sprite [style.--theme-color-1="'#CCC'"] -->
         <div class="building">{{node.getBuilding()}} </div>
         <div class="inputs">
             <div class="input" *ngFor="let input of node.getInput()">{{input.toString()}} </div>
         </div>
         <div class="output">{{node.getOutput().toString()}} </div>
-        <div class="time">{{node.getMinutes()}}m </div>
-        <div class="amount">{{node?.getAmount()}} </div>
+        <div class="time">{{+node.getMinutes().toFixed(2)}}m </div>
+        <div class="amount">{{+node?.getAmount().toFixed(2)}} </div>
     </div>
 </ng-template>
