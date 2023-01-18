@@ -1,3 +1,8 @@
-.stretch {
+app-auto-completion {
   width: 95% !important;
+}
+
+mat-form-field {
+  margin-left: 20px;
+  width: 30% !important;
 }
