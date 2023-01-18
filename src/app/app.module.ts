@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { OrgChartModule } from 'angular13-organization-chart';
 import { MaterialModule } from './angular-material/material.module';
 
@@ -10,6 +10,7 @@ import { ProductionsListComponent } from './productions-list/productions-list.co
 import { ProductionComponent } from './production/production.component';
 import { ProductionFormComponent } from './production-form/production-form.component';
 import { AutoCompletionComponent } from "./auto-completion/auto-completion.component";
+import { CreateProductionDialogComponent } from "./productions-list/create-production-dialog/create-production-dialog.component";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AutoCompletionComponent } from "./auto-completion/auto-completion.compo
     ProductionsListComponent,
     ProductionComponent,
     ProductionFormComponent,
+    CreateProductionDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -25,9 +27,11 @@ import { AutoCompletionComponent } from "./auto-completion/auto-completion.compo
     ReactiveFormsModule,
     OrgChartModule,
     MaterialModule,
+    FormsModule,
   ],
   exports: [
-    AutoCompletionComponent
+    AutoCompletionComponent,
+    CreateProductionDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent],
