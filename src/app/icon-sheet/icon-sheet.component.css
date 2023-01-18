@@ -225,3 +225,70 @@
   background-position: -1920px -384px;
 }
 
+
+.icon-paper {
+  background-position: 0px -512px;
+}
+.icon-book {
+  background-position: -128px -512px;
+}
+.icon-education {
+  background-position: -256px -512px;
+}
+.icon-lance {
+  background-position: -384px -512px;
+}
+.icon-music {
+  background-position: -512px -512px;
+}
+.icon-steel_ingot {
+  background-position: -640px -512px;
+}
+.icon-coke {
+  background-position: -768px -512px;
+}
+.icon-saltpeter {
+  background-position: -896px -512px;
+}
+.icon-gunpowder {
+  background-position: -1024px -512px;
+}
+.icon-metal_cuttings {
+  background-position: -1152px -512px;
+}
+.icon-fireworks {
+  background-position: -1280px -512px;
+}
+
+
+.icon-club {
+  background-position: 0px -768px;
+}
+.icon-pitchfork {
+  background-position: 0px -896px;
+}
+.icon-bow {
+  background-position: -128px -896px;
+}
+.icon-copper_sword {
+  background-position: -256px -896px;
+}
+.icon-horse {
+  background-position: -384px -896px;
+}
+.icon-longbow {
+  background-position: -512px -896px;
+}
+.icon-crossbow {
+  background-position: -640px -896px;
+}
+.icon-iron_sword {
+  background-position: -768px -896px;
+}
+.icon-armored_horse {
+  background-position: -896px -896px;
+}
+.icon-cannon {
+  background-position: -1024px -896px;
+}
+
