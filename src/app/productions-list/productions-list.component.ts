@@ -33,12 +33,13 @@ export class ProductionsListComponent implements OnInit {
     let s1 = new ProductionStep('Edelküche', 1.33333, [new Resource('Hummer', 2), new Resource('Likör', 1)], new Resource('Festmahl', 2), [s2, s3]);
     let p = new Production('Festmähler', s1);
 
-    this.productionList.push(productionLinen);
-    this.productionList.push(productionRope);
+    // this.productionList.push(productionLinen);
+    // this.productionList.push(productionRope);
     this.productionList.push(p);
 
     this.productionList.forEach(element => {
-      element.resolveAmounts();
+      let array = element.resolveAmounts();
+      element.fixAmounts(array);
     });
   }
 }
