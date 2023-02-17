@@ -53,38 +53,34 @@ export class Production {
         if (nonNaturalValues.length === 0) {
             return;
         }
-        let number = this.calculateMultiplier(nonNaturalValues);
+        let number = this.smallestMultiplier(nonNaturalValues);
         console.log(number, nonNaturalValues);
-        this.multipleAmounts(number, parentNode);
+        this.multiplyAmounts(number, parentNode);
     }
 
-    private calculateMultiplier(numbers: number[]): number {
-        let smallestNatural = Number.MAX_SAFE_INTEGER;
-        let sum = 0;
-        for (let i = 0; i < numbers.length; i++) {
-          const number = numbers[i];
-          if (!Number.isInteger(number)) {
-            // Find the smallest integer that the number can be multiplied by
-            smallestNatural = Math.min(smallestNatural, Math.ceil(number));
-          }
-          sum += number;
+    private smallestMultiplier(arr: number[]): number {
+        const gcd = (...nums: number[]): number => {
+            if (nums.length === 2) {
+                return nums[1] === 0 ? nums[0] : gcd(nums[1], nums[0] % nums[1]);
+            }
+            return nums.reduce((a, b) => gcd(a, b));
         }
-        // Find the greatest common divisor of all the differences between each number and the sum
-        let gcd = Math.abs(numbers[0] - sum);
-        for (let i = 1; i < numbers.length; i++) {
-          gcd = this.calculateGCD(Math.abs(numbers[i] - sum), gcd);
+      
+        const lcm = (a: number, b: number) => {
+          return (a * b) / gcd(a, b);
         }
-        // Return the least common multiple of the smallest natural number and the greatest common divisor
-        return smallestNatural * (gcd / this.calculateGCD(smallestNatural, gcd));
-      }
       
-      private calculateGCD(a: number, b: number): number {
-        return b == 0 ? a : this.calculateGCD(b, a % b);
-      }
+        const multiple = arr.reduce((acc, val) => lcm(acc, val), 1);
+        const div = gcd.apply(null, arr);
+        const result = multiple / div;
+      
+        return Number.isInteger(result) && result > 0 ? result : 1;
+    }
+    
       
       
       
-    public multipleAmounts(factor: number, parentNode?: ProductionStep) {
+    public multiplyAmounts(factor: number, parentNode?: ProductionStep) {
         if (null == parentNode) {
             parentNode = this.root;
         }
@@ -101,7 +97,7 @@ export class Production {
             let requiredAmount = childAmount * factor;
             
             child.setAmount(requiredAmount);
-            this.multipleAmounts(factor, child);
+            this.multiplyAmounts(factor, child);
         }
     }     
 }
