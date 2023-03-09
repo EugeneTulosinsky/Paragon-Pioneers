@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductionsListComponent } from './productions-list/productions-list.component';
 import { ProductionComponent } from './production/production.component';
+import { IconSheetComponent } from './icon-sheet/icon-sheet.component';
 import { ProductionFormComponent } from './production-form/production-form.component';
 import { AutoCompletionComponent } from "./auto-completion/auto-completion.component";
 
@@ -17,6 +18,7 @@ import { AutoCompletionComponent } from "./auto-completion/auto-completion.compo
     AutoCompletionComponent,
     ProductionsListComponent,
     ProductionComponent,
+    IconSheetComponent,
     ProductionFormComponent,
   ],
   imports: [
